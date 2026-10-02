@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #08080a;
+  --bg-secondary: #101017;
+  --bg-tertiary: #161622;
+  --foreground: #f4f4f6;
+  --accent-primary: #d4af37;
+  --accent-secondary: #f3e5ab;
+  --accent-glow: rgba(212, 175, 55, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(212, 175, 55, 0.35);
+  --card-gradient-from: #1c1c28;
+  --card-gradient-to: #0e0e16;
+}
+
+[data-theme="midnight-platinum"] {
+  --bg-primary: #040914;
+  --bg-secondary: #0a1324;
+  --bg-tertiary: #101e38;
+  --foreground: #f0f6fc;
+  --accent-primary: #38bdf8;
+  --accent-secondary: #e2e8f0;
+  --accent-glow: rgba(56, 189, 248, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-accent: rgba(56, 189, 248, 0.38);
+  --card-gradient-from: #12213f;
+  --card-gradient-to: #081224;
+}
+
+[data-theme="emerald-aurum"] {
+  --bg-primary: #03120a;
+  --bg-secondary: #072014;
+  --bg-tertiary: #0e3020;
+  --foreground: #f0fdf4;
+  --accent-primary: #10b981;
+  --accent-secondary: #fbbf24;
+  --accent-glow: rgba(16, 185, 129, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(16, 185, 129, 0.38);
+  --card-gradient-from: #0e3824;
+  --card-gradient-to: #051a0f;
+}
+
+[data-theme="stealth-monochrome"] {
+  --bg-primary: #0b0c0e;
+  --bg-secondary: #14161b;
+  --bg-tertiary: #1d2027;
+  --foreground: #f8fafc;
+  --accent-primary: #cbd5e1;
+  --accent-secondary: #94a3b8;
+  --accent-glow: rgba(226, 232, 240, 0.22);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(226, 232, 240, 0.35);
+  --card-gradient-from: #222631;
+  --card-gradient-to: #0f1116;
+}
+
+[data-theme="bordeaux-bronze"] {
+  --bg-primary: #120409;
+  --bg-secondary: #200812;
+  --bg-tertiary: #2e0d1b;
+  --foreground: #fff1f2;
+  --accent-primary: #f43f5e;
+  --accent-secondary: #d97706;
+  --accent-glow: rgba(244, 63, 94, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-accent: rgba(244, 63, 94, 0.38);
+  --card-gradient-from: #3b0e22;
+  --card-gradient-to: #18050d;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: var(--bg-primary);
+  transition: background-color 0.5s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Dynamic Glass & Metallic Panels */
+.glass-panel {
+  background: rgba(18, 18, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-panel-accent {
+  background: var(--bg-secondary);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-accent);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-secondary) 30%, var(--accent-primary) 70%, #8c7320 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.radial-glow {
+  background: radial-gradient(circle at 50% 50%, var(--accent-glow) 0%, rgba(8, 8, 10, 0) 70%);
+}
+
+.horology-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hairline-accent {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent-primary) 50%, transparent 100%);
+}
